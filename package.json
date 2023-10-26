@@ -1,8 +1,8 @@
 {
-  "name": "walle-lego",
+  "name": "wall-e",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://wh1t3h47.github.io/walle-lego/",
+  "homepage": "https://wh1t3h47.github.io/Wall-e/",
   "dependencies": {
     "@babel/core": "^7.16.0",
     "@headlessui/react": "^1.7.17",
