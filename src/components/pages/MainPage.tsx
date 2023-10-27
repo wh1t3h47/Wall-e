@@ -5,16 +5,49 @@ import { StackedCard } from "../molecules/StackedCard";
 import MainTemplate from "../templates/MainTemplate";
 import { ShimmerEveTemplate } from "../templates/ShimmerEveTemplate";
 import { ShimmerWalleeTemplate } from "../templates/ShimmerWalleTemplate";
+import { TbLego } from "react-icons/tb";
+import { FaAward, FaRegLightbulb } from "react-icons/fa";
+import { BsLightbulb, BsRobot, BsTrophy } from "react-icons/bs";
+import { TfiRulerPencil } from "react-icons/tfi";
 
 const MainPage: React.FC = () => {
   return (
     <MainTemplate
-      teamInfo="A equipe Wallee: Excelência em LEGO, Estrutura e Sensores"
-      showcase={[
-        <ShowcaseTile title="Wall-e" key="walle">
+      title={
+        <>
+          <FaRegLightbulb className="me-2 ms-10" />
+          Transformando Ideias em Inovação
+        </>
+      }
+      teamInfo={
+        <>
+          <TbLego className="mx-2" fontSize="1.8rem" />A equipe Wallee é
+          Excelência em LEGO, Estrutura e Sensores
+        </>
+      }
+      showcases={[
+        <ShowcaseTile
+          title={
+            <>
+              <h3>Wall-e</h3>
+              <BsRobot />
+            </>
+          }
+          alt="Robô Wall-e com animação andando"
+          key="walle"
+        >
           <ShimmerWalleeTemplate />
         </ShowcaseTile>,
-        <ShowcaseTile title="Eve" key="eve">
+        <ShowcaseTile
+          title={
+            <>
+              <h3>Eve</h3>
+              <BsRobot />
+            </>
+          }
+          alt="Robô Eve com animação escaneando objetos"
+          key="eve"
+        >
           <ShimmerEveTemplate />
         </ShowcaseTile>,
       ]}
@@ -50,15 +83,38 @@ const MainPage: React.FC = () => {
           </CardTitle>
         </StackedCard>,
       ]}
+      sectionTitle={
+        <>
+          <FaAward className="mx-2" /> Nossas Conquistas:
+        </>
+      }
       achievements={[
         <>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 justify-start mx-5 mt-2 mb-10">
             <Card
-              title="Vencedores da Competição Regional"
-              isLoading={false}
+              title={
+                <>
+                  <BsTrophy fontSize="1.85rem" className="mx-2" />
+                  Vencedores da Competição Regional
+                </>
+              }
             ></Card>
-            <Card title="Inovação em Robótica" isLoading={false}></Card>
-            <Card title="Melhor Design de Máquina" isLoading={false}></Card>
+            <Card
+              title={
+                <>
+                  <BsLightbulb fontSize="1.55rem" className="mx-2" />
+                  Inovação em Robótica
+                </>
+              }
+            ></Card>
+            <Card
+              title={
+                <>
+                  <TfiRulerPencil fontSize="1.5rem" className="mx-2 mb-1" />O
+                  Melhor Design de Máquina
+                </>
+              }
+            ></Card>
           </div>
 
           <img
