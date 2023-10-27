@@ -52,7 +52,7 @@ const MainPage: React.FC = () => {
         </ShowcaseTile>,
       ]}
       cards={[
-        <StackedCard>
+        <StackedCard key="demo1">
           <CardTitle>
             <img
               src={process.env.PUBLIC_URL + "/demo1.jpeg"}
@@ -62,7 +62,7 @@ const MainPage: React.FC = () => {
             />
           </CardTitle>
         </StackedCard>,
-        <StackedCard>
+        <StackedCard key="demo2">
           <CardTitle>
             <img
               src={process.env.PUBLIC_URL + "/demo2.jpeg"}
@@ -72,7 +72,7 @@ const MainPage: React.FC = () => {
             />
           </CardTitle>
         </StackedCard>,
-        <StackedCard>
+        <StackedCard key="demo3">
           <CardTitle>
             <img
               src={process.env.PUBLIC_URL + "/demo3.jpeg"}
